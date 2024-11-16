@@ -39,5 +39,5 @@ def braille_ascii_to_text(braille_text):
 translator = Translator()
 
 def translate_text(text, target_language):
-  translation = translator.translate(text, dest=target_language)
-  return translation.text
+    translation = translator.translate(text, dest=target_language)
+    return translation.text
