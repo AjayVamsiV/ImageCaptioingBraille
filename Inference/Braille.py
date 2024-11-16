@@ -1,3 +1,5 @@
+
+from googletrans import Translator
 # Mapping of text characters to Braille ASCII
 braille_ascii_mapping = {
     'a': '⠁', 'b': '⠃', 'c': '⠉', 'd': '⠙', 'e': '⠑', 'f': '⠋', 'g': '⠛', 'h': '⠓',
@@ -33,3 +35,9 @@ def braille_ascii_to_text(braille_text):
         else:
             text += reverse_mapping.get(symbol, '?')
     return text
+
+translator = Translator()
+
+def translate_text(text, target_language):
+  translation = translator.translate(text, dest=target_language)
+  return translation.text
